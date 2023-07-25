@@ -5,10 +5,17 @@
         Only show {{ numberType }} numbers
       </button>
       <br /><br />
-      <ul class="list-group">
+      <ul class="list-group custom-list-group">
         <li
+          [ngClass]="{ odd: number % 2 !== 0, even: number % 2 === 0 }"
+          [ngStyle]="{
+            backgroundColor:
+              number % 2 !== 0
+                ? 'rgba(183, 223, 253, 0.254)'
+                : 'rgba(203, 240, 203, 0.264)'
+          }"
           *ngFor="let number of onlyOdd ? oddNumbers : evenNumbers"
-          class="list-group-item"
+          class="col-6 list-group-item"
         >
           {{ number }}
         </li>

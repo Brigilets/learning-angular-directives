@@ -1,3 +1,22 @@
 .container {
   margin-top: 30px;
 }
+.odd {
+  color: rgb(9, 83, 241);
+  font-weight: 600;
+}
+.even {
+  color: rgb(20, 146, 20);
+  font-weight: 600;
+}
+.custom-list-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.list-group-item {
+  flex-basis: 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+}
